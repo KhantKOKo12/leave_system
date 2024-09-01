@@ -117,6 +117,21 @@ img#cimg {
     </div>
 </div>
 <script>
+document.addEventListener('DOMContentLoaded', function() {
+    var today = new Date();
+    var startOfYear = new Date(today.getFullYear(), 0, 1); // January 1 of the current year
+    var endOfYear = new Date(today.getFullYear(), 11, 31); // December 31 of the current year
+
+    var todayStr = today.toISOString().split('T')[0];
+    var endOfYearStr = endOfYear.toISOString().split('T')[0];
+
+    var dateStartInput = document.getElementById('date_start');
+    var dateEndInput = document.getElementById('date_end');
+    dateStartInput.setAttribute('min', todayStr);
+    dateStartInput.setAttribute('max', endOfYearStr);
+    dateEndInput.setAttribute('min', todayStr);
+    dateEndInput.setAttribute('max', endOfYearStr);
+});    
 // Function to ensure the date_end cannot be earlier than date_start
 function setMinEndDate() {
     const startDate = $('#date_start').val();

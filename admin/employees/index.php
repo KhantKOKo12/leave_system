@@ -93,7 +93,47 @@
 			_conf("Are you sure to delete this Employee permanently?","delete_user",[$(this).attr('data-id')])
 		})
 		
-		$('.table').dataTable();
+		var table = $('.table').DataTable({
+        // Specify your column index for "Name" and "Details" here
+        "columnDefs": [
+            {
+                "targets": [0, 1, 4], // Assuming column indices for #, Avatar, Action
+                "searchable": false
+            },
+            {
+                "targets": [2, 3], // Assuming column indices for Name and Details
+                "searchable": true
+            }
+        ]
+    });
+
+    // Custom search function to ignore spaces
+    $.fn.dataTable.ext.search.push(
+        function(settings, data, dataIndex) {
+            var searchValue = $.fn.dataTable.ext.search[0].searchValue || '';
+            var columnsToSearch = [2, 3]; // Adjust column indices as necessary
+
+            // Normalize search value by removing spaces
+            searchValue = searchValue.replace(/\s+/g, '').toLowerCase();
+
+            // Normalize data for the columns we're searching
+            for (var i = 0; i < columnsToSearch.length; i++) {
+                var columnData = data[columnsToSearch[i]].replace(/\s+/g, '').toLowerCase();
+                if (columnData.indexOf(searchValue) !== -1) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+    );
+
+    // Search input event handler
+    $('#searchInput').on('keyup', function() {
+        table.search(this.value).draw();
+    });
+
+
 	})
 	function delete_user($id){
 		start_loader();
