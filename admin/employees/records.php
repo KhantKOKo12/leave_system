@@ -50,10 +50,7 @@ if(isMobileDevice()):
                 <td width="80%" class='boder-0 align-bottom'>
                     <div class="row">
                         <div class="col-12">
-                            <div class="d-flex w-max-100">
-                                <label class="float-left w-auto whitespace-nowrap">Employee ID:</label>
-                                <p class="col-md-auto border-bottom border-dark w-100"><b><?php echo $employee_id ?></b></p>
-                            </div>
+                            
                             <div class="d-flex w-max-100">
                                 <label class="float-left w-auto whitespace-nowrap">Name:</label>
                                 <p class="col-md-auto border-bottom border-dark w-100"><b><?php echo $name ?></b></p>

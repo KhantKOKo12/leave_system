@@ -65,7 +65,7 @@ $is_approver = $meta_qry->num_rows > 0 && $meta_qry->fetch_array()['meta_value']
                             <td class="text-center"><?php echo $i++; ?></td>
                             <?php if($_settings->userdata('type') != 3): ?>
                             <th>
-                                <small><b>ID: </b><?php echo $row['employee_id'] ?></small><br>
+                                
                                 <small><b>Name: </b><?php echo $row['name'] ?></small>
                             </th>
                             <?php endif; ?>
@@ -99,10 +99,7 @@ $is_approver = $meta_qry->num_rows > 0 && $meta_qry->fetch_array()['meta_value']
                                     <div class="dropdown-divider"></div>
                                     <?php endif; ?>
                                     <?php if($_settings->userdata('type') != 3 || ($row['status'] == '0') ): ?>
-                                    <a class="dropdown-item"
-                                        href="?page=leave_applications/manage_application&id=<?php echo $row['id'] ?>"><span
-                                            class="fa fa-edit text-primary"></span> Edit</a>
-                                    <div class="dropdown-divider"></div>
+                                    
                                     <a class="dropdown-item delete_data" href="javascript:void(0)"
                                         data-id="<?php echo $row['id'] ?>"><span class="fa fa-trash text-danger"></span>
                                         Delete</a>

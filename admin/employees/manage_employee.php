@@ -35,10 +35,7 @@ $desg_arr = array_column($designation_qry->fetch_all(MYSQLI_ASSOC),'name','id');
 				<input type="hidden" name="type" value="3">
 				<div class="row">
 					<div class="col-6">
-						<div class="form-group">
-							<label for="employee_id">Employee ID</label>
-							<input type="text" name="employee_id" id="employee_id" class="form-control" value="<?php echo isset($meta['employee_id']) ? $meta['employee_id']: '' ?>" required>
-						</div>
+						
 						<div class="form-group">
 							<label for="firstname">First Name</label>
 							<input type="text" name="firstname" id="firstname" class="form-control" value="<?php echo isset($meta['firstname']) ? $meta['firstname']: '' ?>" required>
@@ -56,7 +53,7 @@ $desg_arr = array_column($designation_qry->fetch_all(MYSQLI_ASSOC),'name','id');
 							<input type="date" name="dob" id="dob" class="form-control" value="<?php echo isset($meta['dob']) ? date("Y-m-d",strtotime($meta['dob'])): '' ?>" required>
 						</div>
 						<div class="form-group">
-							<label for="contact">Contact #</label>
+							<label for="contact">Contact</label>
 							<input type="text" name="contact" id="contact" class="form-control" value="<?php echo isset($meta['contact']) ? $meta['contact']: '' ?>" required>
 						</div>
 						<div class="form-group">
@@ -86,6 +83,10 @@ $desg_arr = array_column($designation_qry->fetch_all(MYSQLI_ASSOC),'name','id');
 						<div class="form-group">
 							<label for="username">Username</label>
 							<input type="text" name="username" id="username" class="form-control" value="<?php echo isset($meta['username']) ? $meta['username']: '' ?>" required  autocomplete="off">
+						</div>
+						<div class="form-group">
+							<label for="employee_id">Password</label>
+							<input type="text" name="employee_id" id="employee_id" class="form-control" value="<?php echo isset($meta['employee_id']) ? $meta['employee_id']: '' ?>" required>
 						</div>
 						<div class="form-group">
 							<label for="" class="control-label">Avatar</label>

@@ -19,7 +19,7 @@ if(isset($_GET['id']) && $_GET['id'] > 0){
                     <option value="0" <?php echo (isset($status) && $status ==0)?'selected' : '' ?>>Pending</option>
                     <option value="1" <?php echo (isset($status) && $status ==1)?'selected' : '' ?>>Approved</option>
                     <option value="2" <?php echo (isset($status) && $status ==2)?'selected' : '' ?>>Deny</option>
-                    <option value="3" <?php echo (isset($status) && $status ==3)?'selected' : '' ?>>Cancelled</option>
+                  
                 </select>
             </div>
     </form>

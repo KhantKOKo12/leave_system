@@ -44,7 +44,7 @@ $date_end = isset($_GET['date_end']) ? $_GET['date_end'] : date("Y-m-d");
 					<col width="5%">
 					<col width="20%">
 					<col width="20%">
-					<col width="15%">
+					<col width="20%">
 					<col width="10%">
 					<col width="30%">
 				</colgroup>
@@ -70,7 +70,7 @@ $date_end = isset($_GET['date_end']) ? $_GET['date_end'] : date("Y-m-d");
 						<tr>
 							<td class="text-center"><?php echo $i++; ?></td>
 							<td>
-                                <small><b>ID: </b><?php echo $row['employee_id'] ?></small><br>
+                               
                                 <small><b>Name: </b><?php echo $row['name'] ?></small>
                             </td>
 							<td><?php echo $row['code'] ?> - <?php echo $row['lname'] ?></td>

@@ -47,7 +47,7 @@ img#cimg {
 							?>
                             <option value="<?php echo $row['id'] ?>"
                                 <?php echo (isset($user_id) && $user_id == $row['id']) ? 'selected' : '' ?>>
-                                <?php echo "[".$row['meta_value']."] ".$row['name'] ?></option>
+                                <?php echo $row['name'] ?></option>
                             <?php endwhile; ?>
                         </select>
                     </div>
@@ -68,7 +68,7 @@ img#cimg {
 							?>
                             <option value="<?php echo $row['id'] ?>"
                                 <?php echo (isset($leave_type_id) && $leave_type_id == $row['id']) ? 'selected' : '' ?>>
-                                <?php echo $row['code'] ?></option>
+                                <?php echo $row['name'] ?></option>
                             <?php endwhile; ?>
                         </select>
                     </div>

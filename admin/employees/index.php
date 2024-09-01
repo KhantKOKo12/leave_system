@@ -27,7 +27,7 @@
 				<colgroup>
 					<col width="10%">
 					<col width="15%">
-					<col width="15%">
+					
 					<col width="20%">
 					<col width="30%">
 					<col width="10%">
@@ -36,7 +36,6 @@
 					<tr>
 						<th>#</th>
 						<th>Avatar</th>
-						<th>Employee ID</th>
 						<th>Name</th>
 						<th>Details</th>
 						<th>Action</th>
@@ -59,7 +58,7 @@
 						<tr>
 							<td class="text-center"><?php echo $i++; ?></td>
 							<td class="text-center"><img src="<?php echo validate_image($row['avatar']) ?>" class="img-avatar img-thumbnail p-0 border-2" alt="user_avatar"></td>
-							<td><?php echo ($row['employee_id']) ?></td>
+							
 							<td><?php echo ucwords($row['name']) ?></td>
 							<td >
 								<p class="m-0 ">
